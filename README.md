@@ -11,7 +11,7 @@ Trabalho acadêmico do disciplina Projeto Integrador Transdisciplinar em Ciênci
 - [Fabrício Vasconcelos](https://github.com/FabrVasconcelos)
 
 ## Instalação
-- Ver em [![requirements.txt](requirements.txt)](https://github.com/FabrVasconcelos/PIT_CupcakeStore/blob/main/requirements.txt)
-
+- Ver em [Requirements.txt](https://github.com/FabrVasconcelos/PIT_CupcakeStore/blob/main/requirements.txt)
+  
 ## Melhorias
 - 07/10/2023 - Meu primeiro commit com a estrutura básica e definição de Framework
