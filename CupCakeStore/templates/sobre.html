@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cupcake Store - Sobre</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sweet+Cupcake" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="16x16">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Deliciosa Confeitaria do Shoki</h1>
+        <nav>
+            <ul>
+                <li><a href=".">Início</a></li>
+            </ul>
+            <ul>
+                <li><a href="sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="{{ url_for('static', filename='img/CupcakeHome.jfif') }}" alt="Cupcakes Deliciosos" width="2000" height="300">
+        <h2>Os Cupcakes Mais Saborosos da Cidade</h2>
+    </section>
+
+    <section class="cupcake-sobre">
+        <h2>Sobre nós</h2>
+        <p>Trabalho acadêmico do disciplina Projeto Integrador Transdisciplinar em Ciência da Computação II </p>
+        <a href="https://github.com/FabrVasconcelos">Autor: Fabrício Vasconcelos</a>
+    </section>
+    <p></p>
+    <p></p>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=qs8mBky7vSv4iSxb">.</a>
+    <section class="contact">
+        <h2>Entre em Contato Conosco</h2>
+        <p>Estamos ansiosos para atendê-lo. Faça seu pedido ou faça uma pergunta.</p>
+        <a aria-label="Chat on WhatsApp" href="https://wa.me/1XXXXXXXXXX"><img alt="Chat on WhatsApp" src="{{ url_for('static', filename='img/WhatsAppButtonGreenSmall.png') }}" width="100" height="25"/><a />
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Cupcake Store</p>
+    </footer>
+</body>
+</html>

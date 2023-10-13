@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"/>
-    <title>CupCakeStore - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cupcake Store</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sweet+Cupcake" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="16x16">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
-Teste, 123
+    <header>
+        <h1>Bem-vindo à Deliciosa Confeitaria do Shoki</h1>
+        <nav>
+            <ul>
+                <li><a href=".">Início</a></li>
+            </ul>
+            <ul>
+                <li><a href="sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="{{ url_for('static', filename='img/CupcakeHome.jfif') }}" alt="Cupcakes Deliciosos" width="2000" height="300">
+        <h2>Os Cupcakes Mais Saborosos da Cidade</h2>
+    </section>
+
+    <section class="cupcake-menu">
+        <h2>Nossos Cupcakes</h2>
+        
+        <div class="cupcake-item">
+            <img src="{{ url_for('static', filename='img/CupcakeChocolate.jpg') }}" alt="Cupcake de Chocolate" width="200" height="200">
+            <h3>Cupcake de Chocolate</h3>
+            <h5>R$ 4,99</h5>
+            <p>Delicioso cupcake de chocolate com cobertura de trufas.</p>
+            <div class="quantity-button">
+                <input aria-label="Quantity" size="4" max="99" min="0" value="1" type="number" step="0" id="QtdChocolate">
+            </div>
+        </div>
+        <div class="cupcake-item">
+            <img src="{{ url_for('static', filename='img/CupcakeBaunilha.jpg') }}" alt="Cupcake de Baunilha" width="200" height="200">
+            <h3>Cupcake de Baunilha</h3>
+            <h5>R$ 4,99</h5>
+            <p>Um cupcake de chocolate fresco com creme de baunilha.</p>
+            <div class="quantity-button">
+                <input aria-label="Quantity" size="4" max="99" min="0" value="1" type="number" step="0" id="QtdChocolate">
+            </div>
+        </div>
+        <div class="cupcake-item">
+            <img src="{{ url_for('static', filename='img/CupcakeLimão.jpg') }}" alt="Cupcake de Limão" width="200" height="200">
+            <h3>Cupcake de Limão</h3>
+            <h5>R$ 4,99</h5>
+            <p>Cupcake com recheio de Limão e cobertura de creme de Limão.</p>
+            <div class="quantity-button">
+                <input aria-label="Quantity" size="4" max="99" min="0" value="1" type="number" step="0" id="QtdChocolate">
+            </div>
+        </div>
+        <section class="cupcake-buy">
+        <div>
+            <button class="buy">Adicionar ao carrinho</button>
+        </div>
+        </section>
+    </section>
+
+    <section class="contact">
+        <h2>Entre em Contato Conosco</h2>
+        <p>Estamos ansiosos para atendê-lo. Faça seu pedido ou faça uma pergunta.</p>
+        <a aria-label="Chat on WhatsApp" href="https://wa.me/1XXXXXXXXXX"><img alt="Chat on WhatsApp" src="{{ url_for('static', filename='img/WhatsAppButtonGreenSmall.png') }}" width="100" height="25"/><a />
+        </section>
+
+    <footer>
+        <p>&copy; 2023 My Cupcake Store</p>
+    </footer>
 </body>
 </html>
