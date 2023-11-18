@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #FDB1FF;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Cherry Bomb One';
+    font-style: oblique;
+    font-size: 15px;
+    color: #006673;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+  h2 {
+    font-family: 'Cherry Bomb One';
+  }
+
+  }
+
+  .menu {
+    width: 58%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .carrinho {
+    width: 35%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #FDB1FF;
+    color: rgb(255, 0, 123);
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  #limparCarrinho {
+    background-color: #fe3333;
+    color: white;
+  }
+  #finalizarpedido {
+    background-color: #59d93f;
+    color: white;
+  }
+
+  button:hover {
+    background-color: #005f6b;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .item img {
+    max-width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .item-details {
+    padding: 15px;
+    align-items: center;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #FDB1FF;
+    padding: 10px;
+}
+.contact {
+    background-color: #FDB1FF;
+    text-align: center;
+    padding: 10px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FDB1FF;
+    color: white;
+    text-decoration: none;
+}
