@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cupcake Store</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="16x16">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Cupcake Store</h1>
+      <nav class="menu menu-3">
+        <ul>
+          <li><a href=".">Início</a></li>
+          <li><a href="sobre">Sobre</a></li>
+          <li><a href="contato">Contato</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="agradecimento">
+        <h2>Agradecemos seu pedido conosco ❤</h2>
+        <div id="divgif"><img id="gifagradecimento" src="{{ url_for('static', filename='img/cupcakedelivery.gif') }}" alt="Cupcake Delivery" width="500" height="300">   </div>
+        <div id="Sobre">Seu pedido em breve estara disponivel para a modalidade de entrega escolhida, em caso de duvidas entre em contato conosco.</div>
+        <div></div>
+    </section>
+  </main>
+  <footer id="fim">
+    <p>&copy; 2023 My Cupcake Store</p>
+</footer>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

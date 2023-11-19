@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cupcake Store</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="16x16">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Cupcake Store</h1>
+      <nav class="menu menu-3">
+        <ul>
+          <li><a href=".">Início</a></li>
+          <li><a href="sobre">Sobre</a></li>
+          <li><a href="contato">Contato</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+        <h2> Entre em contato conoscos atrávez das redes sociais!</h2>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-d1f4638b-59c2-4a05-8436-ae406df90344" data-elfsight-app-lazy></div>
+        <!---https://dash.elfsight.com/apps/social-media-icons (Optei usar uma solução onde as bases estão online)-->
+
+        <div id="Telefone">Ou atravéz do nosso telefone (85) 99999-9999</div>
+        <div></div>
+    </section>
+  </main>
+  <footer id="fim">
+    <p>&copy; 2023 My Cupcake Store</p>
+</footer>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
