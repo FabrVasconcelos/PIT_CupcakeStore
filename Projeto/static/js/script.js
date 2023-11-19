@@ -38,8 +38,12 @@ function exibirCarrinho() {
     const botaoAdicionar = criarBotao('+', () => adicionarAoCarrinho(item));
     const botaoDiminuir = criarBotao('-', () => diminuirQuantidade(item));
 
-    li.appendChild(botaoAdicionar);
-    li.appendChild(botaoDiminuir);
+    const spanBotoes = document.createElement('span');
+    spanBotoes.classList.add('botoes');
+    spanBotoes.appendChild(botaoAdicionar);
+    spanBotoes.appendChild(botaoDiminuir);
+
+    li.appendChild(spanBotoes);
     listaCarrinho.appendChild(li);
     total += quantidade * precos[item];
   });
@@ -112,6 +116,23 @@ function finalizarPedido() {
 
   alert(resumo);
 
+  const dadosPedido = {
+    nomeCliente,
+    telefoneCliente,
+    observacao,
+    opcaoEntrega,
+    endereco,
+    numero,
+    cep,
+    cidade,
+    uf,
+    complemento,
+    carrinho,
+    valorTotal,
+  };
+
+  enviarPedidoParaAPI(dadosPedido);
+
   window.location.href = 'obrigado';
 
   carrinho = [];
@@ -131,3 +152,53 @@ document.addEventListener('DOMContentLoaded', function() {
     el.addEventListener('change', verificarEntrega);
   });
 });
+
+function enviarPedidoParaAPI(dadosPedido) {
+  const urlAPI = 'URL_DA_API';
+
+  fetch(urlAPI, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dadosPedido),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Falha ao gravar o pedido na API');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log('Pedido gravado com sucesso na API', data);
+    })
+    .catch((error) => {
+      console.error('Erro ao gravar o pedido na API', error);
+    });
+}
+
+const handlePhone = (event) => {
+  let input = event.target
+  input.value = phoneMask(input.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{2})(\d)/,"($1) $2")
+  value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+  return value
+}
+
+const validaCEP = (event) => {
+  let input = event.target
+  input.value = cepMask(input.value)
+}
+
+const cepMask = (value) => {
+  if (!value) return "";
+  value = value.replace(/\D/g, '');
+  value = value.replace(/^(\d{5})(\d)/, "$1-$2");
+  return value;
+}
+
