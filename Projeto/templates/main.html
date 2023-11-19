@@ -64,13 +64,13 @@
         <p id="total">Total: R$ <span id="total-valor">0.00</span></p>
  
         <label for="nomeCliente">Nome:</label>
-        <input type="text" id="nomeCliente" class="form_input" placeholder="Nome" required>
+        <input type="text" id="nomeCliente" class="form_input" placeholder="Nome" required maxlength="40" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"/>
         
         <label for="telefoneCliente">Telefone:</label>
-        <input type="tel" id="telefoneCliente" pattern="[0-9]+" class="form_input" placeholder="(99) 99999-9999" required>        
+        <input type="tel" id="telefoneCliente" pattern="[0-9]+" class="form_input" placeholder="(99) 99999-9999" required maxlength="15" onkeyup="handlePhone(event)"/>        
         
         <label for="observacao">Observação:</label>
-        <textarea id="observacao" rows="1" cols="50" class="form_input" placeholder="Digite sua observacao aqui..."></textarea>
+        <textarea id="observacao" rows="1" cols="50" class="form_input" placeholder="Digite sua observacao aqui..." maxlength="100"></textarea>
         
         <div class="selecaoEntrega">
         <input type="radio" name="opcaoEntrega" id="entregaLoja" value="loja" checked="checked">
@@ -82,22 +82,22 @@
         
         <div id="dadosEntrega">
           <label for="endereco">Endereço:</label>
-          <input type="text" id="endereco" class="form_input" placeholder="Rua Abc">
+          <input type="text" id="endereco" class="form_input" placeholder="Rua Abc" maxlength="50">
         
           <label for="numero">Número:</label>
-          <input type="text" id="numero" class="form_input" placeholder="000">
+          <input type="text" id="numero" class="form_input" placeholder="000" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="8"/>
         
           <label for="cep">CEP:</label>
-          <input type="text" id="cep" pattern="[0-9]*" maxlength="8" class="form_input" placeholder="99999-999">
+          <input type="text" id="cep" pattern= "\d{5}-?\d{3}" maxlength="8" class="form_input" placeholder="99999-999" onkeyup="validaCEP(event)">
         
           <label for="cidade">Cidade:</label>
-          <input type="text" id="cidade" class="form_input" placeholder="Cidade">
+          <input type="text" id="cidade" class="form_input" placeholder="Cidade" maxlength="20" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"/>
         
           <label for="uf">UF:</label>
-          <input type="text" id="uf" pattern="[A-Z]*" maxlength="2" class="form_input" placeholder="UF">
+          <input type="text" id="uf" maxlength="2" class="form_input" placeholder="UF" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '');" style="text-transform: uppercase;"/>
         
           <label for="complemento">Complemento:</label>
-          <input type="text" id="complemento" class="form_input" placeholder="Complemento">
+          <input type="text" id="complemento" class="form_input" placeholder="Complemento" maxlength="30"/>
         </div>
         <br>
         <button id="limparCarrinho" onclick="limparCarrinho()">Limpar Carrinho</button>

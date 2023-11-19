@@ -73,7 +73,7 @@ button:hover {
   align-items: center;
   text-align: center;
   border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 20px;  
 }
 
 .item img {
@@ -227,7 +227,6 @@ nav ul li {
   }
 }
 
-
 *{
   margin: 0;
   padding: 0;
@@ -239,6 +238,7 @@ nav ul li {
 .menu-3{
   background: #7B1FA2;
   width: 100%;
+  padding-bottom: 8px;
 }
 .menu ul{
   list-style: none;
@@ -293,3 +293,10 @@ nav ul li {
   height: 300px;
 }
 
+li span {
+  float:inline-end;
+}
+
+li {
+  padding-bottom: 15px;
+}
